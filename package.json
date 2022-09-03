@@ -15,7 +15,7 @@
   "author": "Dmytro Kobeza",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
