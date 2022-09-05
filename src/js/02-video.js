@@ -24,4 +24,6 @@ function onTimeUpdate({ seconds }) {
 }
 
 const currentTime = localStorage.getItem('videoplayer-current-time');
-player.setCurrentTime(currentTime);
+player.setCurrentTime(currentTime).then(function (duration) {
+  console.log(`video resumed at ${duration} seconds`);
+});
