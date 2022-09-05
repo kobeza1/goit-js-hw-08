@@ -9,7 +9,9 @@ player.getVideoTitle().then(function (title) {
 });
 
 player.getDuration().then(function (duration) {
-  console.log('duration in seconds:', duration);
+  console.log(
+    `Video duration: ${Math.floor(duration / 60)}:${Math.floor(duration % 60)}`
+  );
 });
 
 player.on('play', function () {
@@ -26,6 +28,10 @@ function onTimeUpdate({ seconds }) {
 const currentTime = localStorage.getItem('videoplayer-current-time');
 if (currentTime) {
   player.setCurrentTime(currentTime).then(function (duration) {
-    console.log(`video resumed at ${duration} seconds`);
+    console.log(
+      `Th video resumed at ${Math.floor(duration / 60)}:${Math.floor(
+        duration % 60
+      )}`
+    );
   });
 }
